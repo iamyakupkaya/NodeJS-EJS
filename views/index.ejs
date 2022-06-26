@@ -6,11 +6,19 @@
 <meta name="keywords" content="html template">
 </head>
 <body>
+    <%- include("_header.ejs")%> 
 <h1>NodeJS EJS COURSES with Yakup KAYA</h1>
 <h2> <%=yas %> </h2>
 <h3> <%=renkler %>  </h3>
 <h4> <%=site %> </h4> <!-- burada kodları olduğu gibi yazar-->
 <%-site %> <!--burada ise etiketlere dikkat eder ve kodu uygular-->
 <h3> <%=kisiler[0].ad %> <%=kisiler[1].ad %> </h3>
+<!--Eğer istersek EJS ile JS kodları da yazarız forlar ifler-->
+<!--Yalnız bu tarz kodları yazabilmek için her satırıejs tanımıın içine almak lazım-->
+<ul>
+    <% kisiler.forEach(kisi => { %>
+        <li> <%= kisi.id %> <%= kisi.ad %> </li> 
+       <% }) %>
+</ul> 
 </body>
 </html>

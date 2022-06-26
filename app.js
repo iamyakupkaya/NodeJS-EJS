@@ -6,6 +6,8 @@ console.log(path.resolve(__dirname));
 
 // Ejs, html şablonlarıyla, servis tarafımızdan gelen verileri birleştirebilmemizi sağlayan javascript kütüphanesidir.
 app.set("view engine", "ejs");
+//Eğer views klasörün değilde bizim tanımladığımız klasörüün altındaki dosyalara baksın ejs istersek diye kendi yolumuzu belirtebiliriz.
+//app.set("views", path.resolve(__dirname, "yeni_klasor_adi"));
 
 const kisilerDizisi = [
   { ad: "yakup1", id: 1 },
